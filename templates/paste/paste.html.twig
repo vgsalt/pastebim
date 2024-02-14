@@ -1,0 +1,14 @@
+{% extends "base.html.twig" %}
+
+{% block javascripts %}
+    <script>hljs.highlightAll();</script>
+{% endblock %}
+
+{% block body %}
+    <main>
+        <h1>{{ name }}</h1>
+        <p>Laget: {{ date|format_datetime }} | Språk: {{ language }}</p>
+        <pre><code>{{ paste }}</code></pre>
+        <a href="{{ path("index") }}">Hjem</a>
+    </main>
+{% endblock %}

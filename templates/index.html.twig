@@ -1,0 +1,18 @@
+{% extends "base.html.twig" %}
+
+{% block body %}
+    <main>
+        <h1>PastebIM</h1>
+        <p>Som Pastebin, men for IM-elever!</p>
+
+        <a href="{{ path('create') }}">Lag en ny paste</a>
+        <p>Paster:</p>
+        <div class="paster">
+            {% for paste in paster %}
+                <a class="paste-card" href="/paste/{{ paste.uniqueId }}">
+                     {{ paste.name }} / {{ paste.date|format_date }} / {{ paste.language }}
+                </a>
+            {% endfor %}
+        </div>
+    </main>
+{% endblock %}

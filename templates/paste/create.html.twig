@@ -1,0 +1,35 @@
+{% extends "base.html.twig" %}
+
+{% block stylesheets %}
+    <style>
+        form {
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: column;
+            gap: 4px;
+        }
+
+        form > div:not(.form-error) {
+            display:flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        form > #paste_submit {
+            max-width: fit-content;
+            background-color: violet;
+        }
+    </style>
+{% endblock %}
+
+{% block body %}
+    <main>
+        <h1>Lag en paste</h1>
+        {# Her starter formen! #}
+        {{ form_start(form) }}
+          <div class="form-error">
+              {{ form_errors(form) }}
+          </div>
+        {{ form_end(form) }}
+    </main>
+{% endblock %}

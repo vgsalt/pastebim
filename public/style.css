@@ -1,0 +1,40 @@
+body {
+    background-color: #dddddd !important;
+    color: #000;
+    font-family: -apple-system, BlinkMacSystemFont, avenir next, avenir, segoe ui, helvetica neue, helvetica, Cantarell, Ubuntu, roboto, noto, arial, sans-serif;
+}
+
+main {
+    max-width: 1440px;
+    margin: 2rem 10vw;
+    background-color: #eeeeee;
+    padding: 1rem;
+}
+
+main > h1 {
+    margin-top: 0;
+}
+
+a {
+    color: #000;
+    text-underline-offset: 5px;
+}
+
+a:hover {
+    text-decoration-color: #0d7155;
+}
+
+.paster {
+    display: flex;
+    flex-direction: column;
+}
+
+.paste-card {
+    background-color: #dddddd;
+    padding: 1rem;
+    text-decoration: none;
+}
+
+.paste-card:hover {
+    background-color: #d2d2d2;
+}
